@@ -1,0 +1,47 @@
+{
+  "welcome": "Welcome",
+  "home": "Home",
+  "about": "About",
+  "contact": "Contact",
+  "login": "Login",
+  "logout": "Logout",
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "edit": "Edit",
+  "search": "Search",
+  "loading": "Loading...",
+  "error": "Error",
+  "success": "Success",
+  "complaint": {
+    "title": "Complaint Management System",
+    "submit": "Submit Complaint",
+    "view": "View Complaints",
+    "description": "Description",
+    "status": "Status",
+    "date": "Date",
+    "created": "Complaint created successfully",
+    "updated": "Complaint updated successfully",
+    "deleted": "Complaint deleted successfully",
+    "notFound": "Complaint not found",
+    "fetchError": "Error fetching complaints"
+  },
+  "user": {
+    "registered": "User registered successfully",
+    "loginSuccess": "Login successful",
+    "loginFailed": "Invalid credentials",
+    "notFound": "User not found",
+    "emailExists": "Email already exists"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email format",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "passwordsNotMatch": "Passwords do not match"
+  },
+  "server": {
+    "started": "Server started on port",
+    "dbConnected": "Database connected successfully",
+    "dbError": "Database connection error"
+  }
+}

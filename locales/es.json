@@ -1,0 +1,47 @@
+{
+  "welcome": "Bienvenido",
+  "home": "Inicio",
+  "about": "Acerca de",
+  "contact": "Contacto",
+  "login": "Iniciar sesión",
+  "logout": "Cerrar sesión",
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "delete": "Eliminar",
+  "edit": "Editar",
+  "search": "Buscar",
+  "loading": "Cargando...",
+  "error": "Error",
+  "success": "Éxito",
+  "complaint": {
+    "title": "Sistema de Gestión de Quejas",
+    "submit": "Enviar Queja",
+    "view": "Ver Quejas",
+    "description": "Descripción",
+    "status": "Estado",
+    "date": "Fecha",
+    "created": "Queja creada exitosamente",
+    "updated": "Queja actualizada exitosamente",
+    "deleted": "Queja eliminada exitosamente",
+    "notFound": "Queja no encontrada",
+    "fetchError": "Error al obtener quejas"
+  },
+  "user": {
+    "registered": "Usuario registrado exitosamente",
+    "loginSuccess": "Inicio de sesión exitoso",
+    "loginFailed": "Credenciales inválidas",
+    "notFound": "Usuario no encontrado",
+    "emailExists": "El email ya existe"
+  },
+  "validation": {
+    "required": "Este campo es obligatorio",
+    "invalidEmail": "Formato de email inválido",
+    "passwordTooShort": "La contraseña debe tener al menos 6 caracteres",
+    "passwordsNotMatch": "Las contraseñas no coinciden"
+  },
+  "server": {
+    "started": "Servidor iniciado en el puerto",
+    "dbConnected": "Base de datos conectada exitosamente",
+    "dbError": "Error de conexión a la base de datos"
+  }
+}
