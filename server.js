@@ -1,10 +1,12 @@
 import dotenv from "dotenv";
 dotenv.config();
+
 import express from "express";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
 import i18n from "i18n";
+
 import connectDB from "./db.js";
 import complaintRoutes from "./app/routes/complaint.routes.js";
 import authRoutes from "./app/routes/auth.routes.js";
@@ -36,7 +38,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:4200", // Angular dev
-      "https://student-anonymous-complaint.vercel.app", // ✅ Vercel frontend
+      "https://student-anonymous-complaint.vercel.app", // frontend
     ],
     methods: "GET,POST,PUT,DELETE,OPTIONS",
     allowedHeaders: "Content-Type,Authorization",
@@ -52,7 +54,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/forum", forumRoutes);
 app.use("/api/student", studentRoutes);
 
-// ✅ Static HTML routes (optional if you still use plain HTML pages)
+// ✅ Static HTML routes (optional)
 app.get("/register", (req, res) =>
   res.sendFile(path.join(__dirname, "register.html"))
 );
@@ -63,6 +65,11 @@ app.get("/user_complaints", (req, res) =>
   res.sendFile(path.join(__dirname, "user_complaints.html"))
 );
 
+// ✅ Root Route for Render / browser check
+app.get("/", (req, res) => {
+  res.send("🚀 Backend is running! Visit /api/complaints or /health to test endpoints.");
+});
+
 // ✅ Health Check
 app.get("/health", (req, res) => {
   res.json({
@@ -70,6 +77,11 @@ app.get("/health", (req, res) => {
     message: "Complaint Management System is running",
     timestamp: new Date().toISOString(),
   });
+});
+
+// ✅ Catch-all for undefined routes
+app.use((req, res) => {
+  res.status(404).json({ error: "Route not found" });
 });
 
 // ✅ Start Server
